@@ -24,7 +24,7 @@ typedef int b32;
 
 #define VIRTUAL_WIDTH 640
 #define VIRTUAL_HEIGHT 360
-#define PIXEL_SCALE 4
+#define PIXEL_SCALE 3
 
 #define WINDOW_WIDTH (VIRTUAL_WIDTH * PIXEL_SCALE)    // e.g., 320 * 4 = 1280
 #define WINDOW_HEIGHT (VIRTUAL_HEIGHT * PIXEL_SCALE) // e.g., 180 * 4 = 720

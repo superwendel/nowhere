@@ -2,7 +2,7 @@
 SetLocal EnableDelayedExpansion
 
 REM --- Configuration ---
-SET PROJECT_NAME=picon
+SET PROJECT_NAME=nowhere
 SET CGLM_SUBMODULE_DIR=cglm
 
 REM --- Directories ---

@@ -4,6 +4,9 @@ int main()
 {
 	Init_SDL();
 
+	Arena transientStorage = CreateArena(MB(50));
+	Arena persistentStorage = CreateArena(MB(256));
+
 	Uint64 lastTicks = SDL_GetTicks();
 	
 	b32 running = true;

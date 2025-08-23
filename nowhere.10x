@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<N10X>
+	<Workspace>
+		<IncludeFilter>*.c,*.cpp,*.h,*.inl,*.cs,*.rs,*.jsc,*.jsx,*.json,*.cls,*.phl,*.phtml,*.rhtml,*.tpl,*.phps,*.lua,*.xml,*.xaml,*.css,*.ssi,*.bat,*.wbf,*.wbt,*.txt,*.cmake,*.make,*.makefile,*.mak,*.mk,*.sh,*.bash,*.csv,*.asp,*.pl,*.mac,*.ws,*.vbs,*.perl,*.src,*.rss,*.inc,*.f,*.go,*.prl,*.plx,*.rb,*.lsp,*.lpx,*.ps1,*.command,*.cbl,*.cob,*.qs,*.wxs,*.ph,*.msc,*.glsl,*.hlsl,*.fx,*.vert,*.tesc,*.tese,*.geom,*.frag,*.comp,*.pssl,*.scons,*.cu,</IncludeFilter>
+		<ExcludeFilter></ExcludeFilter>
+		<SyncFiles>true</SyncFiles>
+		<Recursive>true</Recursive>
+		<ShowEmptyFolders>true</ShowEmptyFolders>
+		<IncludeFilesWithoutExt>false</IncludeFilesWithoutExt>
+		<IsFolder>false</IsFolder>
+		<UseVisualStudioEnvBat>true</UseVisualStudioEnvBat>
+		<CaptureExeOutput>false</CaptureExeOutput>
+		<Configurations>
+			<Configuration>Debug</Configuration>
+			<Configuration>Release</Configuration>
+		</Configurations>
+		<Platforms>
+			<Platform>x64</Platform>
+			<Platform>Win32</Platform>
+		</Platforms>
+		<AdditionalIncludePaths>
+			<AdditionalIncludePath>C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\shared</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\um</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\winrt</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\cppwinrt</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\libs\SDL2_ttf-2.24.0\include</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\libs\SDL2_image-2.8.8\include</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\libs\SDL2_mixer-2.8.1\include</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\libs\SDL2-2.32.2\include</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\libs\glad\include</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\libs\glfw-3.4.bin.WIN64\include</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\libs\SDL3-3.2.10\include</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\libs\SDL3_image-3.2.4\include</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\libs\SDL3_ttf-3.2.2\include</AdditionalIncludePath>
+			<AdditionalIncludePath>C:\libs\freetype-windows-binaries-2.13.3\include</AdditionalIncludePath>
+		</AdditionalIncludePaths>
+		<Defines></Defines>
+		<ConfigProperties>
+			<ConfigAndPlatform>
+				<Name>Debug:Win32</Name>
+				<BuildCommand>&amp;quot;$(RootWorkspaceDirectory)/build.bat&amp;quot;</BuildCommand>
+				<RebuildCommand>rmdir /s /q &amp;quot;$(RootWorkspaceDirectory)/bin&amp;quot;&amp;&amp; build.bat</RebuildCommand>
+				<BuildFileCommand></BuildFileCommand>
+				<CleanCommand></CleanCommand>
+				<BuildWorkingDirectory>$(RootWorkspaceDirectory)</BuildWorkingDirectory>
+				<CancelBuild></CancelBuild>
+				<Exe>$(RootWorkspaceDirectory)/bin/picon.exe</Exe>
+				<Args></Args>
+				<WorkingDirectory>$(RootWorkspaceDirectory)/bin/</WorkingDirectory>
+				<DebugCommand>picon</DebugCommand>
+				<DebuggerExe></DebuggerExe>
+				<DebugSln></DebugSln>
+				<Defines></Defines>
+				<ForceIncludes></ForceIncludes>
+			</ConfigAndPlatform>
+			<ConfigAndPlatform>
+				<Name>Debug:x64</Name>
+				<BuildCommand>&amp;quot;$(RootWorkspaceDirectory)/build.bat&amp;quot;</BuildCommand>
+				<RebuildCommand>rmdir /s /q &amp;quot;$(RootWorkspaceDirectory)/bin&amp;quot;&amp;&amp; build.bat</RebuildCommand>
+				<BuildFileCommand></BuildFileCommand>
+				<CleanCommand></CleanCommand>
+				<BuildWorkingDirectory>$(RootWorkspaceDirectory)</BuildWorkingDirectory>
+				<CancelBuild></CancelBuild>
+				<Exe>$(RootWorkspaceDirectory)/bin/nowhere.exe</Exe>
+				<Args></Args>
+				<WorkingDirectory>$(RootWorkspaceDirectory)/bin/</WorkingDirectory>
+				<DebugCommand>nowhere</DebugCommand>
+				<DebuggerExe></DebuggerExe>
+				<DebugSln></DebugSln>
+				<Defines></Defines>
+				<ForceIncludes></ForceIncludes>
+			</ConfigAndPlatform>
+			<ConfigAndPlatform>
+				<Name>Release:Win32</Name>
+				<BuildCommand>&amp;quot;$(RootWorkspaceDirectory)/build.bat&amp;quot;</BuildCommand>
+				<RebuildCommand>rmdir /s /q &amp;quot;$(RootWorkspaceDirectory)/bin&amp;quot;&amp;&amp; build.bat</RebuildCommand>
+				<BuildFileCommand></BuildFileCommand>
+				<CleanCommand></CleanCommand>
+				<BuildWorkingDirectory>$(RootWorkspaceDirectory)</BuildWorkingDirectory>
+				<CancelBuild></CancelBuild>
+				<Exe>$(RootWorkspaceDirectory)/bin/picon.exe</Exe>
+				<Args></Args>
+				<WorkingDirectory>$(RootWorkspaceDirectory)/bin/</WorkingDirectory>
+				<DebugCommand>picon</DebugCommand>
+				<DebuggerExe></DebuggerExe>
+				<DebugSln></DebugSln>
+				<Defines></Defines>
+				<ForceIncludes></ForceIncludes>
+			</ConfigAndPlatform>
+			<ConfigAndPlatform>
+				<Name>Release:x64</Name>
+				<BuildCommand>&amp;quot;$(RootWorkspaceDirectory)/build.bat&amp;quot;</BuildCommand>
+				<RebuildCommand>rmdir /s /q &amp;quot;$(RootWorkspaceDirectory)/bin&amp;quot;&amp;&amp; build.bat</RebuildCommand>
+				<BuildFileCommand></BuildFileCommand>
+				<CleanCommand></CleanCommand>
+				<BuildWorkingDirectory>$(RootWorkspaceDirectory)</BuildWorkingDirectory>
+				<CancelBuild></CancelBuild>
+				<Exe>$(RootWorkspaceDirectory)/bin/picon.exe</Exe>
+				<Args></Args>
+				<WorkingDirectory>$(RootWorkspaceDirectory)/bin/</WorkingDirectory>
+				<DebugCommand>picon</DebugCommand>
+				<DebuggerExe></DebuggerExe>
+				<DebugSln></DebugSln>
+				<Defines></Defines>
+				<ForceIncludes></ForceIncludes>
+			</ConfigAndPlatform>
+			<Config>
+				<Name>Debug</Name>
+				<Defines></Defines>
+			</Config>
+			<Platform>
+				<Name>x64</Name>
+				<Defines></Defines>
+			</Platform>
+		</ConfigProperties>
+		<Children></Children>
+	</Workspace>
+</N10X>

@@ -36,7 +36,7 @@ char* ArenaAlloc(Arena* arena, size_t size)
 	}
 	else
 	{
-		Z_ASSERT(false, "Arena is full");
+		Z_ASSERT(false, "Arena FULL");
 	}
 
 	return result;

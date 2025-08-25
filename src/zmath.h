@@ -1,0 +1,213 @@
+struct Vec2
+{
+	f32 x;
+	f32 y;
+
+	Vec2 operator/(f32 scalar)
+	{
+		return {x / scalar, y / scalar};
+	}
+
+	Vec2 operator*(f32 scalar)
+	{
+		return {x * scalar, y * scalar};
+	}
+
+	Vec2 operator-(Vec2 other)
+	{
+		return {x - other.x, y - other.y};
+	}
+
+	operator bool()
+	{
+		return x != 0.0f && y != 0.0f;
+	}
+};
+
+struct IVec2
+{
+	i32 x;
+	i32 y;
+
+	IVec2 operator-(IVec2 other)
+	{
+    	return {x - other.x, y - other.y};
+	}
+
+	IVec2& operator-=(i32 value)
+	{
+		x -= value; 
+		y -= value;
+    
+		return *this;
+	}
+  
+	IVec2& operator+=(i32 value)
+	{
+		x += value; 
+		y += value;
+    
+		return *this;
+	}
+
+	IVec2 operator/(i32 scalar)
+	{
+		return {x / scalar, y / scalar};
+	}
+};
+
+struct Vec4
+{
+	union
+	{
+		f32 values[4];
+		
+		struct
+		{
+			f32 x;
+			f32 y;
+			f32 z;
+			f32 w;
+		};
+    
+		struct
+		{
+			f32 r;
+			f32 g;
+			f32 b;
+			f32 a;
+		};
+	};
+
+	f32& operator[](int idx)
+	{
+		return values[idx];
+	}
+
+	bool operator==(Vec4 other)
+	{
+		return x == other.x && y == other.y && z == other.z && w == other.w;
+	}
+};
+
+struct Mat4
+{
+	union 
+	{
+		Vec4 values[4];
+		struct
+		{
+			f32 ax;
+			f32 bx;
+			f32 cx;
+			f32 dx;
+
+			f32 ay;
+			f32 by;
+			f32 cy;
+			f32 dy;
+
+			f32 az;
+			f32 bz;
+			f32 cz;
+			f32 dz;
+     
+			f32 aw;
+			f32 bw;
+			f32 cw;
+			f32 dw;
+		};
+	};
+
+	Vec4& operator[](int col)
+	{
+		return values[col];
+	}
+};
+
+ZINLINE i32 sign(i32 x)
+{
+	return(x >= 0)? 1 : -1;
+}
+
+ZINLINE f32 sign(f32 x)
+{
+	return (x >= 0.0f)? 1.0f : -1.0f;
+}
+
+ZINLINE i32 min(i32 a, i32 b)
+{
+	return (a < b)? a : b;
+}
+
+ZINLINE i32 max(i32 a, i32 b)
+{
+	return (a > b)? a : b;
+}
+	
+ZINLINE i64 max(i64 a, i64 b)
+{
+	if(a > b)
+	{
+		return a;
+	}
+
+	return b;
+}
+
+ZINLINE f32 max(f32 a, f32 b)
+{
+	if(a > b)
+	{
+		return a;
+	}
+
+	return b;
+}
+
+ZINLINE f32 min(f32 a, f32 b)
+{
+	if(a < b)
+	{
+		return a;
+	}
+  
+	return b;
+}
+
+f32 approach(f32 current, f32 target, f32 increase)
+{
+	if(current < target)
+	{
+		return min(current + increase, target);
+	}
+  
+	return max(current - increase, target);
+}
+
+ZINLINE f32 lerp(f32 a, f32 b, f32 t)
+{
+	return a + (b - a) * t;
+}
+
+Vec2 vec_2(IVec2 v)
+{
+	return Vec2{(f32)v.x, (f32)v.y};
+}
+
+Vec2 lerp(Vec2 a, Vec2 b, f32 t)
+{
+	Vec2 result;
+	result.x = lerp(a.x, b.x, t);
+	result.y = lerp(a.y, b.y, t);
+  
+	return result;
+}
+
+IVec2 lerp(IVec2 a, IVec2 b, f32 t)
+{
+	IVec2 result;
+	result.x = (i32)floorf(lerp((f32)a.x, (f32)b.x, t));
+	result.y = (i32)floorf(lerp((f32)a.y, (f32)b.y, t));
+	return result;
+}

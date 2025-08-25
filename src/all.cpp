@@ -12,5 +12,6 @@
 
 #include "defs.h"
 #include "zlog.h"
+#include "zmath.h"
 #include "init.cpp"
 #include "main.cpp"

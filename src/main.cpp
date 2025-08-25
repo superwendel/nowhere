@@ -12,20 +12,20 @@ i32 main()
 	gameState = (GameState*)ArenaAlloc(&persistentStorage, sizeof(GameState));
 	if(!gameState)
 	{
-		ZLOG_ERROR("FAIL: Alloc GameState");
+		Z_ERROR("FAIL: Alloc GameState");
 		return -1;
 	}
 
 	i32 user_count = 15;
 
-	ZLOG_INFO("Application started with %d users online.", user_count);
+	Z_INFO("Application started with %d users online.", user_count);
 
-	ZLOG_WARN("Good morning, Crono");
-	ZLOG_DEBUG("DEBUG");
-    ZLOG_WARN("WARN: TEST");
-    ZLOG_INFO("good morning, Crono");
-    ZLOG_ERROR("ERROR: Test");
-    ZLOG_CRIT("CRIT: Test");
+	Z_WARN("Good morning, Crono");
+	Z_DEBUG("DEBUG");
+    Z_WARN("WARN: TEST");
+    Z_INFO("good morning, Crono");
+    Z_ERROR("ERROR: Test");
+    Z_CRIT("CRIT: Test");
 
 	Uint64 lastTicks = SDL_GetTicks();
 

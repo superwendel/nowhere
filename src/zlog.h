@@ -136,11 +136,11 @@ static void ZLog_Log(LogLevel level, char* file, i32 line, char* format, ...)
     fflush(stream);
 }
 
-#define ZLOG_DEBUG(...)   ZLog_Log(ZLOG_LEVEL_DEBUG,   __FILE__, __LINE__, __VA_ARGS__)
-#define ZLOG_INFO(...)    ZLog_Log(ZLOG_LEVEL_INFO,    __FILE__, __LINE__, __VA_ARGS__)
-#define ZLOG_WARN(...)    ZLog_Log(ZLOG_LEVEL_WARN,    __FILE__, __LINE__, __VA_ARGS__)
-#define ZLOG_ERROR(...)   ZLog_Log(ZLOG_LEVEL_ERROR,   __FILE__, __LINE__, __VA_ARGS__)
-#define ZLOG_CRIT(...)    ZLog_Log(ZLOG_LEVEL_CRIT, __FILE__, __LINE__, __VA_ARGS__)
+#define Z_DEBUG(...)   ZLog_Log(ZLOG_LEVEL_DEBUG,   __FILE__, __LINE__, __VA_ARGS__)
+#define Z_INFO(...)    ZLog_Log(ZLOG_LEVEL_INFO,    __FILE__, __LINE__, __VA_ARGS__)
+#define Z_WARN(...)    ZLog_Log(ZLOG_LEVEL_WARN,    __FILE__, __LINE__, __VA_ARGS__)
+#define Z_ERROR(...)   ZLog_Log(ZLOG_LEVEL_ERROR,   __FILE__, __LINE__, __VA_ARGS__)
+#define Z_CRIT(...)    ZLog_Log(ZLOG_LEVEL_CRIT, __FILE__, __LINE__, __VA_ARGS__)
 
 /**
 	* @brief Checks for a condition and terminates app if it is false
@@ -153,7 +153,7 @@ static void ZLog_Log(LogLevel level, char* file, i32 line, char* format, ...)
 	* int* ptr = malloc(size);
 	* ZASSERT(ptr != NULL, "Failed to alloc %zu bytes for player", size);
 	*/
-#define ZASSERT(condition, ...) \
+#define Z_ASSERT(condition, ...) \
 do { \
 	if (!(condition)) { \
 		ZLog_Log(ZLOG_LEVEL_CRIT, __FILE__, __LINE__, "ASSERT FAIL: (%s) - " __VA_ARGS__, #condition); \

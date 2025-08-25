@@ -17,7 +17,7 @@ Arena CreateArena(size_t size)
 	}
 	else
 	{
-		ZASSERT(false, "FAIL: Alloc Memory");
+		Z_ASSERT(false, "FAIL: Alloc Memory");
 	}
 
 	return arena;
@@ -36,7 +36,7 @@ char* ArenaAlloc(Arena* arena, size_t size)
 	}
 	else
 	{
-		//Z_ASSERT(false, "BumpAllocator is full");
+		Z_ASSERT(false, "Arena is full");
 	}
 
 	return result;

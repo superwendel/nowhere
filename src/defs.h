@@ -28,3 +28,8 @@ typedef int b32;
 
 #define WINDOW_WIDTH (VIRTUAL_WIDTH * PIXEL_SCALE)    // e.g., 320 * 4 = 1280
 #define WINDOW_HEIGHT (VIRTUAL_HEIGHT * PIXEL_SCALE) // e.g., 180 * 4 = 720
+
+#define BIT(x) 1 << (x)
+#define KB(x) ((unsigned long long)1024 * x)
+#define MB(x) ((unsigned long long)1024 * KB(x))
+#define GB(x) ((unsigned long long)1024 * MB(x))

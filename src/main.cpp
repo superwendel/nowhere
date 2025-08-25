@@ -1,9 +1,20 @@
 SDL_Window* window;
+GameState* gameState;
 
 i32 main()
 {
 	Init_SDL();
 	ZLog_Init(ZLOG_LEVEL_INFO);
+
+	Arena transientStorage = CreateArena(MB(50));
+	Arena persistentStorage = CreateArena(MB(256));
+
+	gameState = (GameState*)ArenaAlloc(&persistentStorage, sizeof(GameState));
+	if(!gameState)
+	{
+		ZLOG_ERROR("FAIL: Alloc GameState");
+		return -1;
+	}
 
 	i32 user_count = 15;
 

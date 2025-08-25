@@ -13,5 +13,8 @@
 #include "defs.h"
 #include "zlog.h"
 #include "zmath.h"
+#include "arena.h"
+#include "game.h"
+
 #include "init.cpp"
 #include "main.cpp"

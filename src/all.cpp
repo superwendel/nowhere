@@ -8,12 +8,13 @@
 #include FT_FREETYPE_H
 
 #define STB_IMAGE_IMPLEMENTATION
-//#include "stb_image.h"
+#include "stb_image.h"
 
 #include "defs.h"
 #include "zlog.h"
 #include "zmath.h"
 #include "arena.h"
+#include "zlib.h"
 #include "game.h"
 
 #include "init.cpp"

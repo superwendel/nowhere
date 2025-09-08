@@ -17,5 +17,10 @@
 #include "zlib.h"
 #include "game.h"
 
+
 #include "init.cpp"
+#include "sprite.cpp"
+#include "background.cpp"
+#include "shader.cpp"
+#include "camera.cpp"
 #include "main.cpp"

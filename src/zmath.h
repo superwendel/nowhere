@@ -1,19 +1,19 @@
-struct Vec2
+struct vec2
 {
 	f32 x;
 	f32 y;
 
-	Vec2 operator/(f32 scalar)
+	vec2 operator/(f32 scalar)
 	{
 		return {x / scalar, y / scalar};
 	}
 
-	Vec2 operator*(f32 scalar)
+	vec2 operator*(f32 scalar)
 	{
 		return {x * scalar, y * scalar};
 	}
 
-	Vec2 operator-(Vec2 other)
+	vec2 operator-(vec2 other)
 	{
 		return {x - other.x, y - other.y};
 	}
@@ -190,14 +190,14 @@ ZINLINE f32 lerp(f32 a, f32 b, f32 t)
 	return a + (b - a) * t;
 }
 
-Vec2 vec_2(IVec2 v)
+vec2 vec_2(IVec2 v)
 {
-	return Vec2{(f32)v.x, (f32)v.y};
+	return vec2{(f32)v.x, (f32)v.y};
 }
 
-Vec2 lerp(Vec2 a, Vec2 b, f32 t)
+vec2 lerp(vec2 a, vec2 b, f32 t)
 {
-	Vec2 result;
+	vec2 result;
 	result.x = lerp(a.x, b.x, t);
 	result.y = lerp(a.y, b.y, t);
   

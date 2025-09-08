@@ -24,17 +24,17 @@ struct vec2
 	}
 };
 
-struct IVec2
+struct ivec2
 {
 	i32 x;
 	i32 y;
 
-	IVec2 operator-(IVec2 other)
+	ivec2 operator-(ivec2 other)
 	{
     	return {x - other.x, y - other.y};
 	}
 
-	IVec2& operator-=(i32 value)
+	ivec2& operator-=(i32 value)
 	{
 		x -= value; 
 		y -= value;
@@ -42,7 +42,7 @@ struct IVec2
 		return *this;
 	}
   
-	IVec2& operator+=(i32 value)
+	ivec2& operator+=(i32 value)
 	{
 		x += value; 
 		y += value;
@@ -50,13 +50,13 @@ struct IVec2
 		return *this;
 	}
 
-	IVec2 operator/(i32 scalar)
+	ivec2 operator/(i32 scalar)
 	{
 		return {x / scalar, y / scalar};
 	}
 };
 
-struct Vec4
+struct vec4
 {
 	union
 	{
@@ -84,17 +84,17 @@ struct Vec4
 		return values[idx];
 	}
 
-	bool operator==(Vec4 other)
+	bool operator==(vec4 other)
 	{
 		return x == other.x && y == other.y && z == other.z && w == other.w;
 	}
 };
 
-struct Mat4
+struct mat4
 {
 	union 
 	{
-		Vec4 values[4];
+		vec4 values[4];
 		struct
 		{
 			f32 ax;
@@ -119,7 +119,7 @@ struct Mat4
 		};
 	};
 
-	Vec4& operator[](int col)
+	vec4& operator[](int col)
 	{
 		return values[col];
 	}
@@ -190,7 +190,7 @@ ZINLINE f32 lerp(f32 a, f32 b, f32 t)
 	return a + (b - a) * t;
 }
 
-vec2 vec_2(IVec2 v)
+vec2 vec_2(ivec2 v)
 {
 	return vec2{(f32)v.x, (f32)v.y};
 }
@@ -204,9 +204,9 @@ vec2 lerp(vec2 a, vec2 b, f32 t)
 	return result;
 }
 
-IVec2 lerp(IVec2 a, IVec2 b, f32 t)
+ivec2 lerp(ivec2 a, ivec2 b, f32 t)
 {
-	IVec2 result;
+	ivec2 result;
 	result.x = (i32)floorf(lerp((f32)a.x, (f32)b.x, t));
 	result.y = (i32)floorf(lerp((f32)a.y, (f32)b.y, t));
 	return result;

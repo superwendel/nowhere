@@ -17,8 +17,8 @@
 #include "zlib.h"
 #include "game.h"
 
-
 #include "init.cpp"
+#include "lighting.cpp"
 #include "sprite.cpp"
 #include "background.cpp"
 #include "shader.cpp"

@@ -65,6 +65,13 @@ void Sprite_Init(void)
     glEnableVertexAttribArray(1);
 }
 
+Sprite Sprite_Load(char* diffusePath) 
+{
+    Sprite s = {0};
+    s.texture = Texture_Load(diffusePath, &s.width, &s.height);
+    return s;
+}
+
 Sprite Sprite_LoadWithNormal(char* diffusePath, char* normalPath) 
 {
     Sprite s = {0};

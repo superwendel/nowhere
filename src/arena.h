@@ -28,7 +28,6 @@ char* ArenaAlloc(Arena* arena, size_t size)
 	char* result = nullptr;
 	size_t allignedSize = (size + 7) & ~ 7; // This makes sure the first 4 bits are 0 
  
-
 	if(arena->used + allignedSize <= arena->capacity)
 	{
 		result = arena->memory + arena->used;
